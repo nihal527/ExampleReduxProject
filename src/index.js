@@ -7,13 +7,18 @@ import { Provider } from "react-redux";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import configureStore from "./redux/reducers/configureStore";
+import "alertifyjs/build/css/alertify.min.css";
+import "alertifyjs/build/css/alertify.css";
+import { BrowserRouter } from "react-router-dom";
 
 const store = configureStore();
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
