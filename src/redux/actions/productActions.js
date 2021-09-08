@@ -9,6 +9,7 @@ export function getProducts(categoryId) {
     if (categoryId) {
       url = url + "?categoryId=" + categoryId;
     }
+
     return fetch(url)
       .then((response) => response.json())
       .then((result) => dispatch(getProductsSuccess(result)));
@@ -22,7 +23,7 @@ export function updateProductSuccess(product) {
 }
 
 export function saveProductApi(product) {
-  return fetch("http://localhost:3000/products" + (product.id || ""), {
+  return fetch("http://localhost:3000/products/" + (product.id || ""), {
     method: product.id ? "PUT" : "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify(product),

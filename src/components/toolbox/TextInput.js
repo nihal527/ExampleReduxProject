@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const TextInput = ({ name, label, onChange, placeHolder, value, error }) => {
   let wrapperClass = "form-group";
@@ -9,19 +10,18 @@ const TextInput = ({ name, label, onChange, placeHolder, value, error }) => {
 
   return (
     <div className={wrapperClass}>
-      <label htmlFor={name}>
-        <div className="field">
-          <input
-            type="text"
-            name={name}
-            className="form-control"
-            placeholder={placeHolder}
-            value={value}
-            onChange={onChange}
-          ></input>
-          {error && <div className="alert alert-danger">{error}</div>}
-        </div>
-      </label>
+      <label htmlFor={name}>{label}</label>
+      <div className="field">
+        <input
+          type="text"
+          name={name}
+          className="form-control"
+          placeholder={placeHolder}
+          value={value}
+          onChange={onChange}
+        ></input>
+        {error && <div className="alert alert-danger">{error}</div>}
+      </div>
     </div>
   );
 };
