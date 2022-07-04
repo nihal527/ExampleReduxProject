@@ -1,14 +1,9 @@
 import { combineReducers } from "redux";
-import changeCategoryReducer from "./changeCategoryReducer";
-import categoriyListReducer from "./categoriyListReducer";
-import productListReducer from "./productListReducer";
-import cartReducer from "./cartReducer";
-import saveProductReducer from "./saveProductReducer";
+import imageListReducer from "./imageListReducer";
+import favoriteImagesReducer from "./favoriteImagesReducer";
+
 const rootReducer = combineReducers({
-  changeCategoryReducer,
-  categoriyListReducer,
-  productListReducer,
-  cartReducer,
-  saveProductReducer,
+  imageListReducer,
+  favoriteImagesReducer,
 });
 export default rootReducer;

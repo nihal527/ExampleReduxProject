@@ -1,0 +1,25 @@
+.custom-images {
+  width: 270px;
+  height: 200px;
+  border-radius: 10px;
+  border: 5px solid wheat;
+}
+.buttons {
+  /* padding-top: 124px; */
+  display: flex;
+}
+.button1 {
+  padding-right: 10px;
+}
+.custom-area {
+  /* text-align: center; */
+  height: 200px;
+  display: table-cell;
+  vertical-align: middle;
+  /* display: inline-grid; */
+}
+.text-style {
+  padding-bottom: 30px;
+  font-weight: bold;
+  font-size: larger;
+}
